@@ -1,0 +1,13 @@
+{"version": "1.1.0",
+ "packagesDir": ".lake/packages",
+ "packages":
+ [{"type": "path",
+   "scope": "",
+   "name": "PrettyFormat",
+   "manifestFile": "lake-manifest.json",
+   "inherited": false,
+   "dir":
+   "C:/Users/frith/OneDrive - Danmarks Tekniske Universitet/10_semester/thesis_new/pretty_format",
+   "configFile": "lakefile.toml"}],
+ "name": "PrettyExpressiveBenchmark",
+ "lakeDir": ".lake"}

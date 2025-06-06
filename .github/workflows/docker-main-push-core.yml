@@ -9,7 +9,7 @@ on:
         required: true
 
 env:
-  REGISTRY_IMAGE: soraweep/pretty-expressive-oopsla23-artifact
+  REGISTRY_IMAGE: frit007/pretty-expressive-artifact
 
 jobs:
   build:

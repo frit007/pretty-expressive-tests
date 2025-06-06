@@ -1,0 +1,44 @@
+name = "PrettyExpressiveBenchmark"
+version = "0.1.0"
+defaultTargets = ["BenchTool", "Concat", "FillSep", "Json", "Flatten", "SExpFull", "SExpRandom"]
+
+[[require]]
+name = "PrettyFormat"
+git = "https://github.com/frit007/lean-formatter"
+rev = "main"
+
+[[lean_lib]]
+name = "BenchTool"
+root = "BenchTool"
+srcDir = "BenchTool"
+
+
+[[lean_exe]]
+name = "Concat"
+root = "Concat"
+srcDir = "Benchmarks"
+
+[[lean_exe]]
+name = "FillSep"
+root = "FillSep"
+srcDir = "Benchmarks"
+
+[[lean_exe]]
+name = "Json"
+root = "Json"
+srcDir = "Benchmarks"
+
+[[lean_exe]]
+name = "SExpFull"
+root = "SExpFull"
+srcDir = "Benchmarks"
+
+[[lean_exe]]
+name = "Flatten"
+root = "Flatten"
+srcDir = "Benchmarks"
+
+[[lean_exe]]
+name = "SExpRandom"
+root = "SExpRandom"
+srcDir = "Benchmarks"
