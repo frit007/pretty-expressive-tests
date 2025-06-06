@@ -13,6 +13,7 @@ env:
 
 jobs:
   build:
+    environment: production
     strategy:
       fail-fast: false
       matrix:
@@ -64,6 +65,7 @@ jobs:
           retention-days: 1
 
   merge:
+    environment: production
     runs-on: ubuntu-latest
     needs:
       - build
