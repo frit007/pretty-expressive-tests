@@ -23,32 +23,29 @@ COPY lean /workspace/lean
 RUN racket scripts/gen-main.rkt
 
 ###################################################
+RUN apt update
+RUN apt upgrade -y
+WORKDIR /workspace/pretty-expressive-lean
+COPY pretty-expressive-lean /workspace/pretty-expressive-lean
+RUN ulimit -s unlimited
+RUN lake update
+RUN lake build
+###################################################
 # Clone implementations
 
 WORKDIR /workspace
-RUN git clone https://github.com/sorawee/pretty-expressive-ocaml
-RUN git clone https://github.com/sorawee/pretty-expressive pretty-expressive-racket
-RUN git clone https://github.com/sorawee/fmt.git
+# version 0.2 is the version used in the paper (and the ABI changes afterwards)
+RUN git clone --branch 0.2 https://github.com/sorawee/pretty-expressive-ocaml
 
 # merge
 COPY pretty-expressive-ocaml /workspace/pretty-expressive-ocaml
 
 WORKDIR /workspace/pretty-expressive-ocaml
+
+# use the version they used in their paper
 RUN opam install -y --working-dir . --with-test
 RUN eval $(opam config env) && dune build --release
 
-WORKDIR /workspace/pretty-expressive-racket
-RUN raco pkg install --auto --name pretty-expressive
-
-WORKDIR /workspace/fmt
-RUN raco pkg install --auto
-
-###################################################
-
-# Get Z3 working
-COPY rosette /workspace/rosette
-WORKDIR /workspace/rosette
-RUN racket setup-z3.rkt
 
 ###################################################
 # Copy data
