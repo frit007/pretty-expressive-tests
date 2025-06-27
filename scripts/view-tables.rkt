@@ -11,6 +11,24 @@
                       ["PrettyExpressive (W = 1000)"
                        "pretty-expressive-ocaml"
                        "1000"]
+                       ["PrettyExpressive C++(default W)"
+                       "pretty-expressive-cpp"
+                       "default"]
+                       ["PrettyExpressive C++ (W = 1000)"
+                       "pretty-expressive-cpp"
+                       "1000"]
+                       ["PrettyExpressive Lean(default W)"
+                       "pretty-expressive-lean"
+                       "default"]
+                       ["PrettyExpressive Lean (W = 1000)"
+                       "pretty-expressive-lean"
+                       "1000"]
+                       ["PrettyExpressive Lean no constraints (default W)"
+                       "pretty-expressive-lean-no-constraints"
+                       "default"]
+                       ["PrettyExpressive Lean no constraints (W = 1000)"
+                       "pretty-expressive-lean-no-constraints"
+                       "1000"]
                       ["Wadler/Leijen"
                        "leijen"
                        "none"]

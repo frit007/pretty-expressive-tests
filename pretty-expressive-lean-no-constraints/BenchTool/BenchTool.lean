@@ -81,7 +81,7 @@ def runBenchmark (program:String) (cfg : Config) (benchFn : Config → IO Info) 
   let md5 ← md5Hash result.out
 
   let formattedOut :=
-    s!"((target pretty-expressive-lean)\n" ++
+    s!"((target pretty-expressive-lean-no-constraints)\n" ++
     s!" (program {program})\n" ++
     s!" (duration {duration})\n" ++
     s!" (lines {lineCount})\n" ++

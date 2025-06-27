@@ -5,7 +5,7 @@ defaultTargets = ["BenchTool", "Concat", "FillSep", "Json", "Flatten", "SExpFull
 [[require]]
 name = "PrettyFormat"
 git = "https://github.com/frit007/lean-formatter"
-rev = "main"
+rev = "no-constraints"
 
 [[lean_lib]]
 name = "BenchTool"

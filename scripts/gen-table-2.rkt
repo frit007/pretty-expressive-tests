@@ -38,6 +38,7 @@
 
   (define pretty-expressive-default "pretty-expressive-default")
   (define pretty-expressive-1000 "pretty-expressive-1000")
+  
   (define leijen "leijen")
   (define bernardy-paper "bernardy-paper")
   (define bernardy-patched "bernardy-patched")
@@ -104,6 +105,36 @@
 
     (run-it pretty-expressive-1000
             "pretty-expressive-ocaml"
+            "1000"
+            (λ (_) (list "--computation-width" "1000")))
+
+    (run-it pretty-expressive-default
+            "pretty-expressive-lean"
+            "default"
+            (λ (computation-width) (list "--computation-width" computation-width)))
+
+    (run-it pretty-expressive-1000
+            "pretty-expressive-lean"
+            "1000"
+            (λ (_) (list "--computation-width" "1000")))
+
+    (run-it pretty-expressive-default
+            "pretty-expressive-lean-no-constraints"
+            "default"
+            (λ (computation-width) (list "--computation-width" computation-width)))
+
+    (run-it pretty-expressive-1000
+            "pretty-expressive-lean-no-constraints"
+            "1000"
+            (λ (_) (list "--computation-width" "1000")))
+            
+
+    (run-it pretty-expressive-default
+            "pretty-expressive-cpp"
+            "default"
+            (λ (computation-width) (list "--computation-width" computation-width)))
+    (run-it pretty-expressive-1000
+            "pretty-expressive-cpp"
             "1000"
             (λ (_) (list "--computation-width" "1000")))
 

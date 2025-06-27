@@ -1,0 +1,7 @@
+name = "boxing"
+version = "0.1.0"
+defaultTargets = ["ArrayAccess"]
+
+[[lean_exe]]
+name = "ArrayAccess"
+root = "ArrayAccess"

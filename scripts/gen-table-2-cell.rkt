@@ -17,6 +17,18 @@
        (values "pretty-expressive-ocaml"
                (list "run.sh"
                      (format "benchmarks/~a.ml" (string-replace program "-" "_")) "--"))]
+      ["pretty-expressive-lean"
+       (values "pretty-expressive-lean"
+               (list "run.sh"
+                     (format "~a" (string-replace program "-" "_")) "--"))]
+      ["pretty-expressive-cpp"
+       (values "pretty-expressive-cpp"
+               (list "run.sh"
+                     (format "~a" (string-replace program "-" "_")) "--"))]
+      ["pretty-expressive-lean-no-constraints"
+       (values "pretty-expressive-lean-no-constraints"
+               (list "run.sh"
+                     (format "~a" (string-replace program "-" "_")) "--"))]
       ["pretty-expressive-racket"
        (values "pretty-expressive-racket"
                (list (find-executable-path "racket")
@@ -78,7 +90,7 @@
   (define name #f)
   (define target #f)
   (define program #f)
-  (define iter 1)
+  (define iter 5)
   (define timeout 60)
   (define extras '())
 
