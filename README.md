@@ -31,16 +31,16 @@ After installing Docker, you can download and run the Docker image with (possibl
 
 ```
 # Download image (~15 GB download). 
-$ docker pull soraweep/pretty-expressive-oopsla23-artifact:latest
+$ docker pull frit007/pretty-expressive-artifact:latest
 # Run the container
-$ docker run -it --name pretty-artifact soraweep/pretty-expressive-oopsla23-artifact:latest
+$ docker run -it --name pretty-artifact frit007/pretty-expressive-artifact
 ```
 
 This will drop you into a shell inside the container, in the `/workspace` directory, the main directory containing Lean proofs, implementations, and benchmarks.
 
 We have installed `vim` into the container for convenience to edit and view files; you can also use Docker to copy files into and out of the container, see <https://docs.docker.com/engine/reference/commandline/cp/>.
 
-If you leave the container and wish to get back, you will need to restart it with the command `docker start -ia pretty-artifact`. If you wish to instead start from a fresh copy of the image, run `docker rm pretty-artifact` to remove the container and then repeat `docker run -it --name pretty-artifact soraweep/pretty-expressive-oopsla23-artifact:latest` to start a new container.
+If you leave the container and wish to get back, you will need to restart it with the command `docker start -ia pretty-artifact`. If you wish to instead start from a fresh copy of the image, run `docker rm pretty-artifact` to remove the container and then repeat `docker run -it --name pretty-artifact frit007/pretty-expressive-artifact` to start a new container.
 
 
 ### Evaluation: Formatting batteries
