@@ -47,6 +47,7 @@ If you leave the container and wish to get back, you will need to restart it wit
 Used to evaluate how far we have come with the evaluation of batteries
 
 ```
+cd batteries
 lake exe ProjectFormat -folder ../batteries/Batteries -include ../batteries/.lake/build/lib  -include .lake/build/lib -filesPrWorker 1 -workers 16
 ```
 and look for the line
